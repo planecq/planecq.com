@@ -1,2 +1,3 @@
 # planecq.com
-Planecq Landing Page
+Electronic Template
+See http://electronic-html.neuethemes.net/index.html
