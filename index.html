@@ -22,7 +22,7 @@
     <link href="assets/vendor/rs-plugin/css/settings.css"                          rel="stylesheet" type="text/css" media="screen" />
     <link href="assets/vendor/rs-plugin/css/extralayers.css"                       rel="stylesheet" type="text/css" media="screen" />
     <link href="assets/vendor/feather/css/feather.css"                             rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/custom/css/style.css"                                       rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/custom/scss/style.css"                                      rel="stylesheet" type="text/css" media="screen" />
 
     <!-- JS -->
     <script src="assets/vendor/jquery/js/jquery-1.10.1.min.js"                     type="text/javascript"></script>
@@ -578,108 +578,67 @@
     </div>
     <!-- /Google Map -->
 
-    <!-- footer -->
-    <div id="footer">
+    <!-- Contacts Block -->
+    <div class="e-block e-bg-dark hp-services e-block-centered" data-stellar-background-ratio="0.5">
       <div class="container">
+	<!-- Decorative arrow -->
+        <div class="down-arrow-footer fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">&nbsp;</div>
+        <!-- /Decorative arrow -->
+        <div class="dividewhite2"></div>
+        <h2 class="font-accident-one-bold uppercase">Contacts</h2>
+        <div class="dividewhite2"></div>
+        <p>
+	  We operate out of Singapore and South Malaysia, but we take projects worldwide.<br />
+	  Get in touch via email and we will schedule a videocall according to your timezone.
+	</p>
+	<p class="contact-address-inverse"><i class="fa fa-envelope contact-icon"></i><a href="mailto:thibaut@planecq.com">thibaut@planecq.com</a></p>
+	<div class="dividewhite6"></div>
+	
 	<div class="row">
-	  <div class="col-sm-3">
+	  <!-- Singapore contacts -->
+	  <div class="col-sm-4 col-sm-offset-1">
             <div class="infoblock">
-              <!-- About Widget -->
-              <h2 class="font-accident-one-bold">HTML Template</h2>
-              <p>Electronic HTML Template is the fastest way to build your own attractive website.</p>
-
-              <p>Contrast, classic and colorful variations are available in the downloadable archive.</p>
-
-              <p>Just upload the creative template to your hosting and get the working website right now.</p>
-              <!-- / About Widget -->
+              <h5 class="font-accident-one-medium uppercase">Singapore</h5>
+	      <p>
+		We are located right in town at North Bridge Centre.
+		We are often on the go, so email us or give us a call if you want to meet.
+		We can also arrange a meeting anywhere island-wide, just pick your favourite place.
+	      </p>
+              <p><i class="fa fa-phone contact-icon"></i>+65 9852 5512</p>
             </div>
 	  </div>
-
-	  <div class="col-sm-3">
+	  <!-- /Singapore contacts -->
+	  <!-- Malaysia contacts -->
+	  <div class="col-sm-4 col-sm-offset-2">
             <div class="infoblock">
-              <!-- Contacts Widget -->
-              <h2 class="font-accident-one-bold">Contacts</h2>
-              <div class="contact">
-		<div class="footer-addr">
-		  <div class="footer-icon"><i class="fa fa-home"></i></div>
-		  <div class="addr-text">12345, Direct Drive - 110, Daytona Beach, Florida, USA </div>
-		</div>
-		<div class="dividewhite1"></div>
-		<div class="footer-addr">
-		  <div class="footer-icon"><i class="fa fa-phone"></i></div>
-		  <div class="addr-text">1 234 567 67 45</div>
-		</div>
-		<div class="dividewhite1"></div>
-		<div     class="footer-addr">
-		  <div class="footer-icon"><i class="fa fa-envelope"></i></div>
-		  <div class="addr-text"><a href="mailto:info@electronicteam.com">info@electronicteam.com</a></div>
-		</div>
-              </div>
-              <!-- / Contacts Widget -->
+              <h5 class="font-accident-one-medium uppercase">Malaysia</h5>
+              <p>
+		We love our office in Skudai Johor and spend much time there.
+		If you want to see us in Johor Bahru, Kuala Lumpur, or anywhere in Peninsular Malaysia,
+		email or call us and we will set a date to meet where you prefer.
+	      </p>
+	      <p><i class="fa fa-phone contact-icon"></i>+60 7 362 5559</p>
             </div>
 	  </div>
+          <!-- /Malaysia contacts -->
+	</div>
 
-	  <div class="col-sm-3">
-            <div class="infoblock">
-              <!-- Flickr feed Widget -->
-              <h2 class="font-accident-one-bold">flickr feed</h2>
-              <ul id="basicuse" class="thumbs"></ul>
-              <!-- / Flickr feed Widget -->
-            </div>
-	  </div>
-
-	  <div class="col-sm-3">
-            <div class="infoblock">
-              <!-- Follow us Widget -->
-              <h2 class="font-accident-one-bold">Follow us</h2>
-              <div class="follow">
-		<div class="follow-element">
-		  <div class="follow-icon"><i class="fa fa-twitter"></i></div>
-		  <div class="follow-descr">
-                    <div class="follow-social"><a href="#">twitter</a></div>
-                    <div class="follow-numb">324</div>
-		  </div>
-		</div>
-		<div class="dividewhite1"></div>
-		<div class="follow-element">
-		  <div class="follow-icon"><i class="fa fa-facebook"></i></div>
-		  <div class="follow-descr">
-                    <div class="follow-social"><a href="#">facebook</a></div>
-                    <div class="follow-numb">653</div>
-		  </div>
-		</div>
-		<div class="dividewhite1"></div>
-		<div class="follow-element">
-		  <div class="follow-icon"><i class="fa fa-linkedin"></i></div>
-		  <div class="follow-descr">
-                    <div class="follow-social"><a href="#">linkedin</a></div>
-                    <div class="follow-numb">234</div>
-		  </div>
-		</div>
-              </div>
-              <!-- / Follow us Widget -->
-            </div>
+	<!-- Keywords -->
+	<div class="row font-accident-one-medium uppercase">
+	  <div class="col-sm-12">
+	    <p class="keywords">
+	      <span>Research</span> \\ <span>Development</span> \\ <span>Consulting</span> \\
+	      <span>Web Applications</span> \\ <span>Internet of Things</span> \\ <span>Smart Spaces</span>
+	    </p>
 	  </div>
 	</div>
+	<!-- /Keywords -->
+	
       </div>
-      <div class="container">
-	<div class="row partners wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_01.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_02.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_03.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_04.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_05.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_06.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_07.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_08.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_09.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_10.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_11.png" class="img-responsive" alt="x"></div>
-	  <div class="col-xs-1"><img src="assets/custom/images/partners_12.png" class="img-responsive" alt="x"></div>
-	</div>
-      </div>
-
     </div>
+    <!-- /Contacts Block -->
+
+    <!-- Copyright Block -->
     <div id="copyrights-wrapper">
       <div class="container">
 	<div class="copyright wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.5s">
@@ -693,7 +652,7 @@
 	</div>
       </div>
     </div>
-    <!-- /footer -->
+    <!-- /Copyright Block -->
 
     <!-- Back to Top -->
     <div id="back-top"><a href="#top"></a></div>
