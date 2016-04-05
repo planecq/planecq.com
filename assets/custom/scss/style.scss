@@ -3535,11 +3535,18 @@ a.gm-toggle-link {  cursor: pointer;  }
   padding: 24px 0 24px 0;
   background-color: $bg-darker;
   .copyright {
-    display: inline-block;
-    font-size: 12px;
-    line-height: 24px;
+    text-align: center;
+    font-size: 10px;
+    line-height: 18px;
     color: $fontcolor-medium-light;
     a {  color: $fontcolor-medium-light; &:hover {  color: $fontcolor-medium-light;  } }
+    opacity: .5;
+    span {
+      padding: 0 3px;
+    }
+  }
+  .copy-inline {
+    display: inline-block;
   }
   .copy-attrs {  float: left;  margin-right: 30px;  }
   .copy-link {  float: left;  margin-right: 30px;  }
