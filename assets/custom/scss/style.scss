@@ -41,6 +41,7 @@ $bg-darker: #2b2b2b;
 $bg-accent: #586682;
 $bg-light-texture: url('../images/backgrounds/contrast/bg-light.png');
 $bg-dark-texture:  url('../images/backgrounds/contrast/bg-dark.png');
+$bg-wood:  url('../../images/bg-wood.jpg');
 $fontcolor-regular: #333;
 $fontcolor-medium: #999;
 $fontcolor-invert: #fff;
@@ -312,6 +313,7 @@ $accentcolor: #ff9900;
 .e-bg-medium {background: $bg-medium;}
 .e-bg-dark {  background: $bg-dark; color: $fontcolor-medium-light; }
 .e-bg-dark-texture {background: $bg-dark-texture;}
+.e-bg-wood {background: $bg-wood; background-repeat: no-repeat; background-size: 100%; color: $fontcolor-medium-light;}
 
 .e-bg-accent { background: $bg-accent; color: $fontcolor-invert;}
 

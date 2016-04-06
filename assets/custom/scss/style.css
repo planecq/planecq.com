@@ -134,6 +134,12 @@
 .e-bg-dark-texture {
   background: url("../images/backgrounds/contrast/bg-dark.png"); }
 
+.e-bg-wood {
+  background: url("../../images/bg-wood.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #f2f2f2; }
+
 .e-bg-accent {
   background: #586682;
   color: #fff; }
