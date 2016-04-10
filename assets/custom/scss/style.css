@@ -1216,7 +1216,7 @@ ul.sf-menu > li, .sf-menu > li > a {
     float: left; }
     #header-wrapper-mp #site-title h1 {
       font-size: 28px;
-      margin-top: 46px;
+      margin-top: 40px;
       text-transform: uppercase; }
       #header-wrapper-mp #site-title h1 a {
         text-decoration: none; }
@@ -1363,7 +1363,7 @@ ul.sf-menu > li, .sf-menu > li > a {
   float: left; }
 #header-wrapper .is-sticky #site-title h1, #header-wrapper-mp .is-sticky #site-title h1 {
   font-size: 28px;
-  margin-top: 26px; }
+  margin-top: 20px; }
 #header-wrapper .is-sticky #site-title h1 a, #header-wrapper-mp .is-sticky #site-title h1 a {
   text-decoration: none; }
 #header-wrapper .is-sticky #main-menu, #header-wrapper-mp .is-sticky #main-menu {
