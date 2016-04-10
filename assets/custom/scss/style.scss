@@ -1833,13 +1833,15 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 .cap-title {
   font-size: 80px;
   text-transform: uppercase;
+  color: #fff;
 }
 .cap-subtitle {
   font-size: 15px;
   text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(51,51,51,.28);
+  padding: 0 5px;
 }
-.cap-title {color: #fff;}
-.cap-subtitle {color: #fff;}
 
 
 /* Homepage block */
