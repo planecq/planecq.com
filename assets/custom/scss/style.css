@@ -2064,7 +2064,7 @@ ul.sf-menu > li, .sf-menu > li > a {
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out; }
-  .rd-medal span, .rd-medal-skin span, .rd-medal-light span, .rd-medal-dark span, .rd-medal-medium span, .rd-medal-outline span {
+  .rd-medal span, .rd-medal i, .rd-medal-skin span, .rd-medal-skin i, .rd-medal-light span, .rd-medal-light i, .rd-medal-dark span, .rd-medal-dark i, .rd-medal-medium span, .rd-medal-medium i, .rd-medal-outline span, .rd-medal-outline i {
     font-size: 32px;
     line-height: 95px;
     transition: all 0.35s ease-in-out;

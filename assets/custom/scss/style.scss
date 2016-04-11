@@ -2258,7 +2258,7 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out;
-  span {
+  span, i {
     font-size: 32px;
     line-height: 95px;
     transition: all 0.35s ease-in-out;
