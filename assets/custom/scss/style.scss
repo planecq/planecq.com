@@ -46,7 +46,7 @@ $fontcolor-regular: #333;
 $fontcolor-medium: #999;
 $fontcolor-invert: #fff;
 $fontcolor-medium-light: #f2f2f2;
-$hovercolor: #de3627;
+$hovercolor: #237d89;
 $accentcolor: #ff9900;
 
 /* Contrast */
@@ -2434,6 +2434,18 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
     opacity: .5;
   }
 }
+.contact-address-custom {
+  a {
+    color: $fontcolor-medium-light;
+    text-decoration: underline;
+    &:hover {
+	color: $hovercolor;
+	i {
+	    color: $hovercolor;
+	}
+    }
+  }
+}
 .contacts-form {
   input, textarea {
     width: 100%;
@@ -3361,7 +3373,6 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
-
 
 
 /*------------------------------------------------------------------
