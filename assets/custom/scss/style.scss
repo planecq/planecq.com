@@ -15,6 +15,7 @@
 11. Google Map
 12. Footer Styles
 13. Media Query]
+14. Custom Elements
 
 
 -------------------------------------------------------------------*/
@@ -3787,4 +3788,15 @@ a.gm-toggle-link {  cursor: pointer;  }
     margin-bottom: 30px;
   }
   .sticky-wrapper {  height: 80px;  }
+}
+
+
+
+
+/*------------------------------------------------------------------
+[14. Custom Elements]
+*/
+
+.tp-bannertimer {
+    background: url(../../images/timer.png);
 }
