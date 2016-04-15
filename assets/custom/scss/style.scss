@@ -39,7 +39,7 @@ $bg-light:  #e8e8e8;
 $bg-medium: #666;
 $bg-dark:   #333;
 $bg-darker: #2b2b2b;
-$bg-accent: #586682;
+$bg-accent: #237d89;
 $bg-light-texture: url('../images/backgrounds/contrast/bg-light.png');
 $bg-dark-texture:  url('../images/backgrounds/contrast/bg-dark.png');
 $bg-wood:  url('../../images/bg-wood.jpg');
@@ -3583,8 +3583,8 @@ a.gm-toggle-link {  cursor: pointer;  }
   .copy-link {  float: left;  margin-right: 30px;  }
 }
 .keywords {
-  opacity: .4;
-  margin-top:72px;
+  color: $fontcolor-medium-light;
+  margin: 20px 0;
   span {
     padding: 0 18px;
   }

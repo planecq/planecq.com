@@ -46,7 +46,7 @@
   color: #237d89; }
 
 .accent-color, .accent-color a {
-  color: #586682 !important; }
+  color: #237d89 !important; }
 
 .accent-color a:hover {
   color: #237d89 !important; }
@@ -87,7 +87,7 @@
       text-decoration: none; }
 
 .e-block-assent {
-  background: #586682;
+  background: #237d89;
   color: #fff; }
   .e-block-assent p, .e-block-assent h2, .e-block-assent h3, .e-block-assent h4, .e-block-assent h5 {
     color: #fff; }
@@ -141,7 +141,7 @@
   color: #f2f2f2; }
 
 .e-bg-accent {
-  background: #586682;
+  background: #237d89;
   color: #fff; }
 
 .e-bg-section01 {
@@ -1854,7 +1854,7 @@ ul.sf-menu > li, .sf-menu > li > a {
       -ms-transition: all 0.35s ease-in-out;
       transition-delay: .1s; }
       .counts .count-container .count:hover {
-        color: #586682;
+        color: #237d89;
         opacity: 1;
         cursor: pointer; }
       .counts .count-container .count .count-icon {
@@ -1875,7 +1875,7 @@ ul.sf-menu > li, .sf-menu > li > a {
 /* Details on Mainpage */
 .hp-details span {
   font-size: 32px;
-  color: #586682;
+  color: #237d89;
   line-height: 40px; }
 
 /* Features Slider */
@@ -1992,7 +1992,7 @@ ul.sf-menu > li, .sf-menu > li > a {
   position: relative;
   padding: 50px 100px 30px 100px;
   height: 360px;
-  background-color: #586682; }
+  background-color: #237d89; }
   .features-slider h3 {
     color: #fff; }
 
@@ -2086,7 +2086,7 @@ ul.sf-menu > li, .sf-menu > li > a {
 .rd-medal-skin {
   background: #fff; }
   .rd-medal-skin span {
-    color: #586682; }
+    color: #237d89; }
   .rd-medal-skin:hover {
     background: #237d89; }
     .rd-medal-skin:hover span {
@@ -2120,9 +2120,9 @@ ul.sf-menu > li, .sf-menu > li > a {
       color: #fff; }
 
 .rd-medal-outline {
-  border: 2px solid #586682; }
+  border: 2px solid #237d89; }
   .rd-medal-outline span {
-    color: #586682; }
+    color: #237d89; }
   .rd-medal-outline:hover {
     border-color: #237d89;
     background: #237d89; }
@@ -3261,8 +3261,8 @@ a.gm-toggle-link {
     margin-right: 30px; }
 
 .keywords {
-  opacity: .4;
-  margin-top: 72px; }
+  color: #f2f2f2;
+  margin: 20px 0; }
   .keywords span {
     padding: 0 18px; }
 
