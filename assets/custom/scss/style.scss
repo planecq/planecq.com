@@ -1578,9 +1578,38 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
     background: $bg-dark;
     #site-title  { h1 {  color: $fontcolor-invert; a {  color: $fontcolor-invert;  } } }
     #mobnav-btn i {color: $fontcolor-invert;}
-    #main-menu { a { > i {  color: $bg-light;  } &:hover {  color: $fontcolor-invert;  } }
-      > ul > li > a {  color: $bg-light;  }
-      > ul > li > .sf-with-ul:after{  border-top-color: $fontcolor-invert;  }
+    #main-menu { 
+	> ul > li > a {
+	    color: $bg-light;
+	    padding: 0 0 .1em 0;
+	    margin: 1em 1em .9em 1em;
+	    &:hover {
+		color: $fontcolor-invert;
+		border-bottom: solid 3px $fontcolor-invert;
+	    }
+	    &.current {
+		border-bottom: solid 3px $bg-light;
+	    }
+	    &.current:hover {
+		border-bottom: solid 3px $fontcolor-invert;
+	    }
+	}
+	> ul.xactive > li > a {
+	    color: $bg-light;
+	    padding: 1em 1em;
+	    margin: 0;
+	    &:hover {
+		color: $fontcolor-invert;
+		border: none;
+	    }
+	    .current {
+		border: none;
+	    }
+	    &.current:hover {
+		border: none;
+	    }
+	}
+	> ul > li > .sf-with-ul:after{  border-top-color: $fontcolor-invert;  }
     }
     .overlay-border {
       border-top: 1px dotted rgba(255, 255, 255, .6);
