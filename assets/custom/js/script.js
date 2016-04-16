@@ -37,47 +37,47 @@ jQuery(document).ready(function () {
     jQuery(".sticky-header").sticky({topSpacing: 0});
 
 
-    /* FlexSlider */
+  //   /* FlexSlider */
 
-    jQuery('.flexslider').flexslider({
-      animation: "slide",
-      controlNav: false,
-      prevText: "",
-      nextText: ""
-    });
+  //   jQuery('.flexslider').flexslider({
+  //     animation: "slide",
+  //     controlNav: false,
+  //     prevText: "",
+  //     nextText: ""
+  //   });
 
   });
 
 
 
 
-  /* Isotope Portfolio */
+  // /* Isotope Portfolio */
 
-  var $container = jQuery('.isotope-container').imagesLoaded( function() {
-    $container.isotope({
-      // options
-    });
-  });
+  // var $container = jQuery('.isotope-container').imagesLoaded( function() {
+  //   $container.isotope({
+  //     // options
+  //   });
+  // });
 
-  /* activate jquery isotope */
-  var $container = jQuery('#posts').isotope({
-    itemSelector : '.item',
-    isFitWidth: true
-  });
+  // /* activate jquery isotope */
+  // var $container = jQuery('#posts').isotope({
+  //   itemSelector : '.item',
+  //   isFitWidth: true
+  // });
 
-  jQuery(window).smartresize(function(){
-    $container.isotope({
-      columnWidth: '.col-md-3'
-    });
-  });
+  // jQuery(window).smartresize(function(){
+  //   $container.isotope({
+  //     columnWidth: '.col-md-3'
+  //   });
+  // });
 
-  $container.isotope({ filter: '*' });
+  // $container.isotope({ filter: '*' });
 
-  // filter items on button click
-  jQuery('#isotope-filters').on( 'click', 'a', function() {
-    var filterValue = jQuery(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-  });
+  // // filter items on button click
+  // jQuery('#isotope-filters').on( 'click', 'a', function() {
+  //   var filterValue = jQuery(this).attr('data-filter');
+  //   $container.isotope({ filter: filterValue });
+  // });
 
 
 
@@ -303,13 +303,6 @@ jQuery(document).ready(function () {
     }
   });
 
-  jQuery('#back-top a').click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 1200, 'easeInOutExpo');
-    return false;
-  });
-
 
   /* Page scroll links */
 
@@ -325,17 +318,17 @@ jQuery(document).ready(function () {
   });
 
 
-  /* Flickr feed */
+  // /* Flickr feed */
 
-  jQuery('#basicuse').jflickrfeed({
-    limit: 10,
-    qstrings: {
-      id: '32532032@N06'
-    },
-    itemTemplate: '<li>' +
-      '<a href="{{image_b}}"><img src="{{image_s}}" class="img-rounded" alt="{{title}}" /></a>' +
-      '</li>'
-  });
+  // jQuery('#basicuse').jflickrfeed({
+  //   limit: 10,
+  //   qstrings: {
+  //     id: '32532032@N06'
+  //   },
+  //   itemTemplate: '<li>' +
+  //     '<a href="{{image_b}}"><img src="{{image_s}}" class="img-rounded" alt="{{title}}" /></a>' +
+  //     '</li>'
+  // });
 
 
   /* Google Analytics */
