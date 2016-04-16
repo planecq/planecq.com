@@ -314,7 +314,12 @@ $accentcolor: #ff9900;
 .e-bg-medium {background: $bg-medium;}
 .e-bg-dark {  background: $bg-dark; color: $fontcolor-medium-light; }
 .e-bg-dark-texture {background: $bg-dark-texture;}
-.e-bg-wood {background: $bg-wood; background-size: 100%; color: $fontcolor-medium-light;}
+.e-bg-wood {
+    background: $bg-wood;
+    background-size: 100%;
+    color: $fontcolor-medium-light;
+    background-attachment: fixed;
+}
 
 .e-bg-accent { background: $bg-accent; color: $fontcolor-invert;}
 
