@@ -663,9 +663,10 @@ Preloader
 
 // Body
 body {
+  position: relative;
   display: block;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   color: $fontcolor-regular;
   font: 14px/1.7 $font-regular;
   font-weight: 400;
@@ -1579,7 +1580,9 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
     #site-title  { h1 {  color: $fontcolor-invert; a {  color: $fontcolor-invert;  } } }
     #mobnav-btn i {color: $fontcolor-invert;}
     #main-menu { 
-	> ul > li > a {
+	> ul:not(.xactive) > li > a {
+	    background-color: $bg-dark;
+	    border: none;
 	    color: $bg-light;
 	    padding: 0 0 .1em 0;
 	    margin: 1em 1em .9em 1em;
@@ -1587,27 +1590,24 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 		color: $fontcolor-invert;
 		border-bottom: solid 3px $fontcolor-invert;
 	    }
-	    &.current {
+	}
+	> ul:not(.xactive) > li.active > a {
+	    & {
 		border-bottom: solid 3px $bg-light;
 	    }
-	    &.current:hover {
+	    &:hover {
 		border-bottom: solid 3px $fontcolor-invert;
 	    }
-	}
+    	}
 	> ul.xactive > li > a {
-	    color: $bg-light;
-	    padding: 1em 1em;
-	    margin: 0;
+	    border: none;
+	    background-color: $bg-dark;
 	    &:hover {
-		color: $fontcolor-invert;
-		border: none;
+		background-color: $bg-darker;
 	    }
-	    .current {
-		border: none;
-	    }
-	    &.current:hover {
-		border: none;
-	    }
+	}
+	> ul.xactive > li.active > a {
+	    background-color: $bg-darker;
 	}
 	> ul > li > .sf-with-ul:after{  border-top-color: $fontcolor-invert;  }
     }

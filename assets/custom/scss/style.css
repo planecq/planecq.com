@@ -558,9 +558,10 @@ Preloader
 [4. Basic Styles]
 */
 body {
+  position: relative;
   display: block;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   color: #333;
   font: 14px/1.7 "Oxygen", sans-serif;
   font-weight: 400;
@@ -1399,28 +1400,26 @@ ul.sf-menu > li, .sf-menu > li > a {
       color: #fff; }
   #header-wrapper-mp .header-dark #mobnav-btn i {
     color: #fff; }
-  #header-wrapper-mp .header-dark #main-menu > ul > li > a {
+  #header-wrapper-mp .header-dark #main-menu > ul:not(.xactive) > li > a {
+    background-color: #333;
+    border: none;
     color: #e8e8e8;
     padding: 0 0 .1em 0;
     margin: 1em 1em .9em 1em; }
-    #header-wrapper-mp .header-dark #main-menu > ul > li > a:hover {
+    #header-wrapper-mp .header-dark #main-menu > ul:not(.xactive) > li > a:hover {
       color: #fff;
       border-bottom: solid 3px #fff; }
-    #header-wrapper-mp .header-dark #main-menu > ul > li > a.current {
-      border-bottom: solid 3px #e8e8e8; }
-    #header-wrapper-mp .header-dark #main-menu > ul > li > a.current:hover {
-      border-bottom: solid 3px #fff; }
+  #header-wrapper-mp .header-dark #main-menu > ul:not(.xactive) > li.active > a {
+    border-bottom: solid 3px #e8e8e8; }
+  #header-wrapper-mp .header-dark #main-menu > ul:not(.xactive) > li.active > a:hover {
+    border-bottom: solid 3px #fff; }
   #header-wrapper-mp .header-dark #main-menu > ul.xactive > li > a {
-    color: #e8e8e8;
-    padding: 1em 1em;
-    margin: 0; }
+    border: none;
+    background-color: #333; }
     #header-wrapper-mp .header-dark #main-menu > ul.xactive > li > a:hover {
-      color: #fff;
-      border: none; }
-    #header-wrapper-mp .header-dark #main-menu > ul.xactive > li > a .current {
-      border: none; }
-    #header-wrapper-mp .header-dark #main-menu > ul.xactive > li > a.current:hover {
-      border: none; }
+      background-color: #2b2b2b; }
+  #header-wrapper-mp .header-dark #main-menu > ul.xactive > li.active > a {
+    background-color: #2b2b2b; }
   #header-wrapper-mp .header-dark #main-menu > ul > li > .sf-with-ul:after {
     border-top-color: #fff; }
   #header-wrapper-mp .header-dark .overlay-border {

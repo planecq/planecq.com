@@ -318,6 +318,12 @@ jQuery(document).ready(function () {
   });
 
 
+  /* Scrollspy update menu as user scroll */
+  $('body').scrollspy({
+    target: '#main-menu'
+  });
+
+
   // /* Flickr feed */
 
   // jQuery('#basicuse').jflickrfeed({
@@ -421,11 +427,4 @@ jQuery(document).ready(function () {
   }
 
 });
-
-
-
-
-
-
-
 
