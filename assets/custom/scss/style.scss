@@ -733,7 +733,7 @@ ul.list-o {
 
 // Back to top
 #back-top a {
-  background: #ccc url(../images/back_top.png) no-repeat 50% 50%;
+  background: #ccc;
   bottom: 60px;
   display: block;
   height: 40px;
@@ -747,7 +747,10 @@ ul.list-o {
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out;
-  &:hover {  background: $hovercolor url(../images/back_top.png) no-repeat 50% 50%;  }
+  &:hover {  background: $hovercolor;  }
+  i.fa {
+      font-size: 2.6em;
+  }
 }
 
 // Display
