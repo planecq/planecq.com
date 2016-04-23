@@ -2060,6 +2060,26 @@ ul.sf-menu > li, .sf-menu > li > a {
     display: inline-block;
     text-align: left; }
 
+/* Planecq About Block, based on customer review block */
+.about-container {
+  vertical-align: middle; }
+  .about-container .director {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 40px; }
+    .about-container .director span {
+      color: #666; }
+  .about-container .about-content {
+    display: inline-block;
+    text-align: left; }
+    .about-container .about-content .author {
+      color: #666;
+      font-style: italic; }
+    .about-container .about-content i {
+      color: #237d89;
+      width: 42px;
+      text-align: center; }
+
 /* Services block */
 .hp-services ul {
   margin-top: 8px;

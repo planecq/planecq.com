@@ -2245,7 +2245,6 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 
 
 /* Customer's Review Mainpage Block */
-
 .customer-review {
   .review-container {
     width: 80%;
@@ -2263,6 +2262,31 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
       text-align: left;
     }
   }
+}
+
+
+/* Planecq About Block, based on customer review block */
+.about-container {
+    vertical-align: middle;
+    .director {
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 40px;
+	span {  color: #666;  }
+    }
+    .about-content {
+	display: inline-block;
+	text-align: left;
+	.author {
+	    color: #666;
+	    font-style: italic;
+	}
+	i {
+	    color: $hovercolor;
+	    width: 42px;
+	    text-align: center;
+	}
+    }
 }
 
 
