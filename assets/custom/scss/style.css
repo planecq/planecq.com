@@ -1553,64 +1553,67 @@ ul.sf-menu > li, .sf-menu > li > a {
 /*------------------------------------------------------------------
 [8. Sticky Header Menu Colors]
 */
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li > .sf-with-ul:focus:after,
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li:hover > .sf-with-ul:after,
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > .sfHover > .sf-with-ul:after,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li > .sf-with-ul:focus:after,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li:hover > .sf-with-ul:after,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > .sfHover > .sf-with-ul:after {
-  border-top-color: #fff; }
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu a > i,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a > i {
-  color: #fff !important; }
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu a > i,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a > i {
-  color: #e8e8e8 !important; }
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu a:hover,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a:hover {
-  color: #fff; }
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu > ul > li > a,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu > ul > li > a {
-  color: #e8e8e8; }
-#header-wrapper.sticky-menu-dark .is-sticky #main-menu > ul > li > .sf-with-ul:after,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu > ul > li > .sf-with-ul:after {
-  border-top-color: #fff !important; }
-#header-wrapper.sticky-menu-dark .is-sticky .overlay-border,
-#header-wrapper-mp.sticky-menu-dark .is-sticky .overlay-border {
-  display: none; }
-#header-wrapper.sticky-menu-dark .is-sticky #mobnav-btn i,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #mobnav-btn i {
-  color: #fff !important; }
-#header-wrapper.sticky-menu-dark .is-sticky #site-title h1,
-#header-wrapper-mp.sticky-menu-dark .is-sticky #site-title h1 {
-  color: #fff !important; }
-  #header-wrapper.sticky-menu-dark .is-sticky #site-title h1 a,
-  #header-wrapper-mp.sticky-menu-dark .is-sticky #site-title h1 a {
+#header-wrapper.sticky-menu-dark,
+#header-wrapper-mp.sticky-menu-dark {
+  background: #333; }
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li > .sf-with-ul:focus:after,
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li:hover > .sf-with-ul:after,
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu .sf-arrows > .sfHover > .sf-with-ul:after,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li > .sf-with-ul:focus:after,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > li:hover > .sf-with-ul:after,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu .sf-arrows > .sfHover > .sf-with-ul:after {
+    border-top-color: #fff; }
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu a > i,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a > i {
     color: #fff !important; }
-#header-wrapper.sticky-menu-dark .is-sticky .sticky-header,
-#header-wrapper-mp.sticky-menu-dark .is-sticky .sticky-header {
-  background: #333;
-  opacity: 1; }
-#header-wrapper.sticky-menu-dark .sf-menu ul li,
-#header-wrapper-mp.sticky-menu-dark .sf-menu ul li {
-  background: #fff;
-  opacity: 1; }
-  #header-wrapper.sticky-menu-dark .sf-menu ul li ul li,
-  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li {
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu a > i,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a > i {
+    color: #e8e8e8 !important; }
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu a:hover,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu a:hover {
+    color: #fff; }
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu > ul > li > a,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu > ul > li > a {
+    color: #e8e8e8; }
+  #header-wrapper.sticky-menu-dark .is-sticky #main-menu > ul > li > .sf-with-ul:after,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #main-menu > ul > li > .sf-with-ul:after {
+    border-top-color: #fff !important; }
+  #header-wrapper.sticky-menu-dark .is-sticky .overlay-border,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky .overlay-border {
+    display: none; }
+  #header-wrapper.sticky-menu-dark .is-sticky #mobnav-btn i,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #mobnav-btn i {
+    color: #fff !important; }
+  #header-wrapper.sticky-menu-dark .is-sticky #site-title h1,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky #site-title h1 {
+    color: #fff !important; }
+    #header-wrapper.sticky-menu-dark .is-sticky #site-title h1 a,
+    #header-wrapper-mp.sticky-menu-dark .is-sticky #site-title h1 a {
+      color: #fff !important; }
+  #header-wrapper.sticky-menu-dark .is-sticky .sticky-header,
+  #header-wrapper-mp.sticky-menu-dark .is-sticky .sticky-header {
+    background: #333;
+    opacity: 1; }
+  #header-wrapper.sticky-menu-dark .sf-menu ul li,
+  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li {
     background: #fff;
     opacity: 1; }
-    #header-wrapper.sticky-menu-dark .sf-menu ul li ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li ul li.sfHover,
-    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li:hover,
-    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li.sfHover {
+    #header-wrapper.sticky-menu-dark .sf-menu ul li ul li,
+    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li {
+      background: #fff;
+      opacity: 1; }
+      #header-wrapper.sticky-menu-dark .sf-menu ul li ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li ul li.sfHover,
+      #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li:hover,
+      #header-wrapper-mp.sticky-menu-dark .sf-menu ul li ul li.sfHover {
+        background: #333; }
+    #header-wrapper.sticky-menu-dark .sf-menu ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li.sfHover,
+    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li:hover,
+    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li.sfHover {
       background: #333; }
-  #header-wrapper.sticky-menu-dark .sf-menu ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li.sfHover,
-  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li:hover,
-  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li.sfHover {
-    background: #333; }
-  #header-wrapper.sticky-menu-dark .sf-menu ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li.sfHover > a,
-  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li:hover,
-  #header-wrapper-mp.sticky-menu-dark .sf-menu ul li.sfHover > a {
-    color: #fff !important; }
+    #header-wrapper.sticky-menu-dark .sf-menu ul li:hover, #header-wrapper.sticky-menu-dark .sf-menu ul li.sfHover > a,
+    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li:hover,
+    #header-wrapper-mp.sticky-menu-dark .sf-menu ul li.sfHover > a {
+      color: #fff !important; }
 
 #header-wrapper.sticky-menu-light .is-sticky #main-menu a > i,
 #header-wrapper-mp.sticky-menu-light .is-sticky #main-menu a > i {

@@ -1761,6 +1761,7 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 
 #header-wrapper.sticky-menu-dark,
 #header-wrapper-mp.sticky-menu-dark {
+  background: $bg-dark;
   .is-sticky {
     #main-menu {
       .sf-arrows > li > .sf-with-ul:focus:after,
