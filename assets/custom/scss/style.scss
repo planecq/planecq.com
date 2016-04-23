@@ -491,14 +491,35 @@ $accentcolor: #ff9900;
 
 /* Headings Fonts variables */
 
+@font-face {
+    font-family: 'Colaborate-Thin';
+    src: url('../fonts/ColabThi.otf');
+}
+@font-face {
+    font-family: 'Colaborate-Light';
+    src: url('../fonts/ColabLig.otf');
+}
+@font-face {
+    font-family: 'Colaborate-Medium';
+    src: url('../fonts/ColabMed.otf');
+}
+@font-face {
+    font-family: 'Colaborate-Regular';
+    src: url('../fonts/ColabReg.otf');
+}
+@font-face {
+    font-family: 'Colaborate-Bold';
+    src: url('../fonts/ColabBol.otf');
+}
+
 $font-accident-one-book:          Novecentosanswide-Book,      sans-serif;
 $font-accident-one-bold:          Novecentosanswide-Bold,      sans-serif;
 $font-accident-one-demibold:      Novecentosanswide-DemiBold,  sans-serif;
 $font-accident-one-light:         Novecentosanswide-Light,     sans-serif;
 $font-accident-one-medium:        Novecentosanswide-Medium,    sans-serif;
 $font-accident-one-normal:        Novecentosanswide-Normal,    sans-serif;
-$font-accident-two: 'Georgia',                  serif;
-$font-regular: 'Oxygen',                        sans-serif;
+$font-accident-two:               'Georgia',                   serif;
+$font-regular:                    'Colaborate-Light',          sans-serif;
 
 
 /* Heading font one */
@@ -668,7 +689,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   color: $fontcolor-regular;
-  font: 14px/1.7 $font-regular;
+  font: 1.6em/1.45 $font-regular;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
@@ -749,7 +770,7 @@ ul.list-o {
   -ms-transition: all 0.35s ease-in-out;
   &:hover {  background: $hovercolor;  }
   i.fa {
-      font-size: 2.6em;
+      font-size: 2.3em;
   }
 }
 
@@ -2273,6 +2294,7 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 	text-align: center;
 	margin-bottom: 40px;
 	span {  color: #666;  }
+	h4 { font-size: 1.7em }
     }
     .about-content {
 	display: inline-block;
@@ -2282,6 +2304,7 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
 	    font-style: italic;
 	}
 	i {
+	    font-size: 2.5em;
 	    color: $hovercolor;
 	    width: 42px;
 	    text-align: center;
@@ -2297,7 +2320,7 @@ ul.sf-menu > li, .sf-menu > li > a {  border: none;  text-align: left;  }
     margin-top: 8px;
 //    border-left: 1px dashed $bg-medium;
     padding: 0 8px;
-    font-size: 12px;
+    font-size: .82em;
     font-weight: 600;
     li {
       color: $bg-dark;
@@ -3018,7 +3041,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {  c
   margin-bottom: 22px;
 }
 .post-date {
-  font-family: 'Oxygen', sans-serif;
+  font-family: $font-regular;
   font-style: oblique;
   font-size: 12px;
   line-height: 14px;
@@ -3628,8 +3651,8 @@ a.gm-toggle-link {  cursor: pointer;  }
   background-color: $bg-darker;
   .copyright {
     text-align: center;
-    font-size: 11px;
-    line-height: 18px;
+    font-size: .8em;
+    line-height: 1.3em;
     color: $fontcolor-medium-light;
     a {  color: $fontcolor-medium-light; &:hover {  color: $fontcolor-medium-light;  } }
     opacity: .5;
@@ -3647,7 +3670,8 @@ a.gm-toggle-link {  cursor: pointer;  }
   color: $fontcolor-medium-light;
   margin: 20px 0;
   span {
-    padding: 0 18px;
+      padding: 0 18px;
+      font-size: .85em;
   }
 }
 

@@ -304,6 +304,21 @@
 [3. Typography]
 */
 /* Headings Fonts variables */
+@font-face {
+  font-family: 'Colaborate-Thin';
+  src: url("../fonts/ColabThi.otf"); }
+@font-face {
+  font-family: 'Colaborate-Light';
+  src: url("../fonts/ColabLig.otf"); }
+@font-face {
+  font-family: 'Colaborate-Medium';
+  src: url("../fonts/ColabMed.otf"); }
+@font-face {
+  font-family: 'Colaborate-Regular';
+  src: url("../fonts/ColabReg.otf"); }
+@font-face {
+  font-family: 'Colaborate-Bold';
+  src: url("../fonts/ColabBol.otf"); }
 /* Heading font one */
 .font-accident-one-bold {
   font-family: Novecentosanswide-Bold, sans-serif;
@@ -355,17 +370,17 @@
 
 /* Regular font */
 .font-regular-light {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Colaborate-Light", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
 .font-regular-normal {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Colaborate-Light", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
 .font-regular-bold {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Colaborate-Light", sans-serif;
   font-weight: 700;
   font-style: normal; }
 
@@ -563,7 +578,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   color: #333;
-  font: 14px/1.7 "Oxygen", sans-serif;
+  font: 1.6em/1.45 "Colaborate-Light", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
@@ -650,7 +665,7 @@ ul.list-o {
   #back-top a:hover {
     background: #237d89; }
   #back-top a i.fa {
-    font-size: 2.6em; }
+    font-size: 2.3em; }
 
 .inline {
   display: inline; }
@@ -802,7 +817,7 @@ input[type="text"], textarea {
   border: 1px solid #666;
   border-radius: 3px;
   color: #959595;
-  font: 12px/1.6 "Oxygen", sans-serif, Helvetica, Arial, sans-serif;
+  font: 12px/1.6 "Colaborate-Light", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-weight: 500;
   -webkit-transition: border linear .3s, box-shadow linear .3s;
@@ -828,7 +843,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
   color: #fff;
   font-weight: 800;
   font-size: 12px;
-  font-family: "Oxygen", sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "Colaborate-Light", sans-serif, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   cursor: pointer;
   -webkit-transition: background .2s ease-out;
@@ -2069,6 +2084,8 @@ ul.sf-menu > li, .sf-menu > li > a {
     margin-bottom: 40px; }
     .about-container .director span {
       color: #666; }
+    .about-container .director h4 {
+      font-size: 1.7em; }
   .about-container .about-content {
     display: inline-block;
     text-align: left; }
@@ -2076,6 +2093,7 @@ ul.sf-menu > li, .sf-menu > li > a {
       color: #666;
       font-style: italic; }
     .about-container .about-content i {
+      font-size: 2.5em;
       color: #237d89;
       width: 42px;
       text-align: center; }
@@ -2084,7 +2102,7 @@ ul.sf-menu > li, .sf-menu > li > a {
 .hp-services ul {
   margin-top: 8px;
   padding: 0 8px;
-  font-size: 12px;
+  font-size: .82em;
   font-weight: 600; }
   .hp-services ul li {
     color: #333;
@@ -2222,7 +2240,7 @@ ul.sf-menu > li, .sf-menu > li > a {
 .blog-hp .article-author-hp .article-author-name {
   padding-top: 14px; }
   .blog-hp .article-author-hp .article-author-name h4 {
-    font-family: "Oxygen", sans-serif; }
+    font-family: "Colaborate-Light", sans-serif; }
   .blog-hp .article-author-hp .article-author-name p {
     color: #999;
     line-height: 18px;
@@ -2265,7 +2283,7 @@ ul.sf-menu > li, .sf-menu > li > a {
 .contacts-form input, .contacts-form textarea {
   width: 100%;
   border-radius: 0;
-  font: 12px/1.6 "Oxygen", sans-serif, Helvetica, Arial, sans-serif;
+  font: 12px/1.6 "Colaborate-Light", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 15px; }
@@ -2672,7 +2690,7 @@ blockquote {
   font-size: 16px;
   line-height: 26px; }
   blockquote footer {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Colaborate-Light", sans-serif;
     font-size: 14px;
     color: #999;
     font-style: normal;
@@ -2712,7 +2730,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
   margin-bottom: 22px; }
 
 .post-date {
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Colaborate-Light", sans-serif;
   font-style: oblique;
   font-size: 12px;
   line-height: 14px;
@@ -2984,7 +3002,7 @@ figure.effect-goliath {
     color: #fff;
     padding: 8px 18px;
     text-transform: none;
-    font-family: "Oxygen", sans-serif;
+    font-family: "Colaborate-Light", sans-serif;
     font-size: 12px;
     opacity: 0;
     -webkit-transition: opacity 0.5s, -webkit-transform 0.35s;
@@ -3279,8 +3297,8 @@ a.gm-toggle-link {
   background-color: #2b2b2b; }
   #copyrights-wrapper .copyright {
     text-align: center;
-    font-size: 11px;
-    line-height: 18px;
+    font-size: .8em;
+    line-height: 1.3em;
     color: #f2f2f2;
     opacity: .5; }
     #copyrights-wrapper .copyright a {
@@ -3302,7 +3320,8 @@ a.gm-toggle-link {
   color: #f2f2f2;
   margin: 20px 0; }
   .keywords span {
-    padding: 0 18px; }
+    padding: 0 18px;
+    font-size: .85em; }
 
 /*------------------------------------------------------------------
 [13. Media Query]
