@@ -2,19 +2,22 @@ language: ruby
 rvm: 2.0.0
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true #speed up install of html-proofer
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
   ssh_known_hosts: webhost.planecq.xyz
 branches:
   only:
-    - master
+  - master
 before_install:
-  - openssl aes-256-cbc -K $encrypted_b0b2958c016f_key -iv $encrypted_b0b2958c016f_iv -in .travis/travis_rsa.enc -out ~/.ssh/travis_rsa -d
-  - chmod 600 ~/.ssh/travis_rsa
+- openssl aes-256-cbc -K $encrypted_b0b2958c016f_key -iv $encrypted_b0b2958c016f_iv -in .travis/travis_rsa.enc -out ~/.ssh/travis_rsa -d
+- chmod 600 ~/.ssh/travis_rsa
 install:
-  - gem install html-proofer
+- gem install html-proofer
 script:
-  - .travis/test.sh
+- .travis/test.sh
 deploy:
   provider: script
   script: .travis/deploy.sh
+notifications:
+  slack:
+    secure: rWg9x69iBqu+1KQLMSrHQTtidE1g8CLPnSN6Gq1OoBm8giagt1iUQ/Ctwb3deJGOGIaluLuZzrMWlqFAGlulSjvWxYtcGdmdwcA5eRKFip7zRSMjOxF7gXJNhX4NCeTyVbsGsPLKytrJPvPiBO+gSDgYhEOIuwSfV/RkZuSBWVZf1zK0yUdF743EyiHNG6GlICMdA5aQKRLiWU9lKN/fhtEZJTKbMk/cuAlJ16Uxkzzs8aQK+xFN+Zpail56zhl6CFACAiWTORjGm+kaF2HrJrnm65HZQ9xF8B56NuAJRGdu+1i3BoJjMu88mkDNX9/HTjKkhe5zHKouYFjaIfOI4vi0gp9W4PMf+ZKSeZB1e21uti46GHW4xEuVb2Gz+AFFt2O3D9GQIrbA0nyzG2Quax7UMC0rVNgIvYlTFqzDvv6rdu9iGu1GXOmBl3xwp4jpxl5W7VclyPsF26o+SUnvcN5C9fzq/hhHl5H2nvIOYeiqas/gOLz/+mzJ5yM9GS4oPbqoGtZ5KOOfLM0oX2ZUWGYH7zGAX5DCFzfwFjkyw+v8SCjjaP0g8bhj2exM3khSgwwHP3Q1c0ivH5zujMSW1lTP7BVQDsDvu9fmhs0xhv487YvUVUXK/kmRGdFG3UKUjcO6dBPAYG8ZFT1maio2H2lAJ/ie+Kv2VDieDglWhyA=
