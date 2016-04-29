@@ -8,7 +8,7 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
     eval "$(ssh-agent -s)" #start the ssh agent
     ssh-add ~/.ssh/travis_rsa
     git remote add deploy "travis@webhost.planecq.xyz:/var/www/planecq.com"
-    git push deploy master
+    git push -f deploy master
 
 else
 
