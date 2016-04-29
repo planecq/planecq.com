@@ -1,0 +1,20 @@
+language: ruby
+rvm: 2.0.0
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true #speed up install of html-proofer
+addons:
+  ssh_known_hosts: webhost.planecq.xyz
+branches:
+  only:
+    - master
+before_install:
+  - openssl aes-256-cbc -K $encrypted_b0b2958c016f_key -iv $encrypted_b0b2958c016f_iv -in .travis/travis_rsa.enc -out ~/.ssh/travis_rsa -d
+  - chmod 600 ~/.ssh/travis_rsa
+install:
+  - gem install html-proofer
+script:
+  - .travis/test.sh
+deploy:
+  provider: script
+  script: .travis/deploy.sh
