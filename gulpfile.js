@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var bootlint  = require('gulp-bootlint');
 
 gulp.task('sass', function() {
   return gulp.src('./assets/custom/scss/style.scss')
@@ -11,4 +12,11 @@ gulp.task('sass', function() {
 
 gulp.task('sass:watch', function() {
   gulp.watch('./assets/custom/scss/style.scss', ['sass']);
+});
+
+gulp.task('bootlint', function() {
+  return gulp.src('./index.html')
+    .pipe(bootlint({
+      stoponerror: true
+    }));
 });
