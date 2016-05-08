@@ -1,5 +1,6 @@
 {
   "preset": "node-style-guide",
-  "maximumLineLength": null,
-  "requireTrailingComma": null
+  "maximumLineLength": false,
+  "requireTrailingComma": false,
+  "requireCamelCaseOrUpperCaseIdentifiers": false
 }
