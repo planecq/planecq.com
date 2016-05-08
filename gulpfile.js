@@ -15,7 +15,7 @@ gulp.task('sass:watch', function() {
   gulp.watch('./assets/custom/scss/style.scss', ['sass']);
 });
 
-// Validates html, links, etc.
+// Validate html, links, etc.
 gulp.task('html-proofer', function(done) {
   execute('htmlproofer ./index.html --check-html --check-favicon --check-external-hash', {}, done);
 });

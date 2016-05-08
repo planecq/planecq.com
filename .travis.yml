@@ -1,8 +1,8 @@
 language: ruby
-rvm: 2.0.0
+rvm: 2.2
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 addons:
   ssh_known_hosts: webhost.planecq.xyz
 branches:
@@ -15,8 +15,10 @@ before_install:
 - git clone https://code.google.com/p/zopfli/ && cd zopfli && make && chmod +x zopfli && cd ..
 install:
 - gem install html-proofer
+- npm install -g gulp
+- npm install
 script:
-- .travis/build.sh && .travis/test.sh
+- .travis/build.sh && npm test
 deploy:
   provider: script
   script: .travis/deploy.sh
