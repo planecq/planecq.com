@@ -1,0 +1,23 @@
+{
+  "name": "planecq.com",
+  "version": "1.0.0",
+  "description": "Landing page for Planecq Pte. Ltd.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planecq/planecq.com.git"
+  },
+  "author": "Thibaut Tiberghien <thibaut@planecq.com>",
+  "license": "All rights reserved.",
+  "bugs": {
+    "url": "https://github.com/planecq/planecq.com/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1"
+  }
+}
