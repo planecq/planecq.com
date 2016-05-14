@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
   'use strict';
 
 
@@ -22,29 +22,29 @@ jQuery(document).ready(function () {
 
   /* Preloader */
 
-  setTimeout(function(){
+  setTimeout(function() {
     jQuery('body').addClass('loaded');
     //jQuery('h1').css('color','#222222');
   }, 3000);
 
 
 
-  jQuery(window).load(function () {
+  jQuery(window).load(function() {
 
 
     /* Sticky Header */
 
-    jQuery(".sticky-header").sticky({topSpacing: 0});
+    jQuery('.sticky-header').sticky({topSpacing: 0});
 
 
-  //   /* FlexSlider */
+    //   /* FlexSlider */
 
-  //   jQuery('.flexslider').flexslider({
-  //     animation: "slide",
-  //     controlNav: false,
-  //     prevText: "",
-  //     nextText: ""
-  //   });
+    //   jQuery('.flexslider').flexslider({
+    //     animation: "slide",
+    //     controlNav: false,
+    //     prevText: "",
+    //     nextText: ""
+    //   });
 
   });
 
@@ -96,14 +96,14 @@ jQuery(document).ready(function () {
 
 
   jQuery('#mobnav-btn').click(
-    function () {
-      jQuery('.sf-menu').toggleClass("xactive");
+    function() {
+      jQuery('.sf-menu').toggleClass('xactive');
     }
   );
 
   jQuery('.mobnav-subarrow').click(
-    function () {
-      jQuery(this).parent().toggleClass("xpopdrop");
+    function() {
+      jQuery(this).parent().toggleClass('xpopdrop');
     }
   );
 
@@ -118,8 +118,8 @@ jQuery(document).ready(function () {
   });
 
   // handles the carousel thumbnails
-  jQuery('[id^=carousel-selector-]').click(function () {
-    var id_selector = jQuery(this).attr("id");
+  jQuery('[id^=carousel-selector-]').click(function() {
+    var id_selector = jQuery(this).attr('id');
     var id = id_selector.substr(id_selector.length - 1);
     id = parseInt(id);
     jQuery('#myCarousel').carousel(id);
@@ -128,7 +128,7 @@ jQuery(document).ready(function () {
   });
 
   // when the carousel slides, auto update
-  jQuery('#myCarousel').on('slid', function (e) {
+  jQuery('#myCarousel').on('slid', function(e) {
     var id = jQuery('.item.active').data('slide-number');
     id = parseInt(id);
     jQuery('[id^=carousel-selector-]').removeClass('selected');
@@ -185,26 +185,26 @@ jQuery(document).ready(function () {
   //html5_resizer();
 
   // Hero image
-  var document_height = jQuery( window ).height();
-  var document_width = jQuery( window ).width();
-  jQuery(".heroimage-wrap").height(document_height);
+  var document_height = jQuery(window).height();
+  var document_width = jQuery(window).width();
+  jQuery('.heroimage-wrap').height(document_height);
 
-  var header_height = jQuery(".outer-wrap").outerHeight() * -1;
+  var header_height = jQuery('.outer-wrap').outerHeight() * -1;
   console.log(header_height);
-  if (header_height!==0) {
+  if (header_height !== 0) {
     // $("#heroimage1").css("marginTop",header_height);
   }
   jQuery(window).resize(function() {
 
-    document_height = jQuery( window ).height();
+    document_height = jQuery(window).height();
 
-    if ( jQuery(".outer-wrap").is(":visible") ) {
+    if (jQuery('.outer-wrap').is(':visible')) {
       // header_height = $(".'.esc_js($offsetclass).'").outerHeight() * -1;
       // $("#heroimage1").css({"marginTop":header_height,"background-size":"cover"});
     } else {
-      jQuery("#heroimage").css({"marginTop":"0","background-size":"cover"});
+      jQuery('#heroimage').css({marginTop: '0','background-size': 'cover'});
     }
-    jQuery(".heroimage-wrap").height(document_height);
+    jQuery('.heroimage-wrap').height(document_height);
   });
 
 
@@ -216,7 +216,7 @@ jQuery(document).ready(function () {
   if (jQuery('.tp-banner').length) {
     jQuery('.tp-banner').show().revolution(
       {
-        dottedOverlay: "none",
+        dottedOverlay: 'none',
         delay: 9000,
         startwidth: 1170,
         startheight: 900,
@@ -226,17 +226,17 @@ jQuery(document).ready(function () {
         thumbHeight: 50,
         thumbAmount: 5,
 
-        navigationType: "none",
-        navigationArrows: "solo",
-        navigationStyle: "preview1",
+        navigationType: 'none',
+        navigationArrows: 'solo',
+        navigationStyle: 'preview1',
 
-        touchenabled: "off",
-        onHoverStop: "on",
+        touchenabled: 'off',
+        onHoverStop: 'on',
 
-        parallax: "scroll",
-        parallaxBgFreeze: "on",
+        parallax: 'scroll',
+        parallaxBgFreeze: 'on',
         parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
-        parallaxDisableOnMobile: "off",
+        parallaxDisableOnMobile: 'off',
 
         swipe_velocity: 0.7,
         swipe_min_touches: 1,
@@ -244,43 +244,43 @@ jQuery(document).ready(function () {
         drag_block_vertical: false,
 
 
-        keyboardNavigation: "on",
+        keyboardNavigation: 'on',
 
-        navigationHAlign: "center",
-        navigationVAlign: "bottom",
+        navigationHAlign: 'center',
+        navigationVAlign: 'bottom',
         navigationHOffset: 0,
         navigationVOffset: 20,
 
-        soloArrowLeftHalign: "left",
-        soloArrowLeftValign: "center",
+        soloArrowLeftHalign: 'left',
+        soloArrowLeftValign: 'center',
         soloArrowLeftHOffset: 20,
         soloArrowLeftVOffset: 0,
 
-        soloArrowRightHalign: "right",
-        soloArrowRightValign: "center",
+        soloArrowRightHalign: 'right',
+        soloArrowRightValign: 'center',
         soloArrowRightHOffset: 20,
         soloArrowRightVOffset: 0,
 
         shadow: 0,
-        fullWidth: "on",
-        fullScreen: "on",
+        fullWidth: 'on',
+        fullScreen: 'on',
 
-        spinner: "spinner0",
+        spinner: 'spinner0',
 
-        stopLoop: "off",
+        stopLoop: 'off',
         stopAfterLoops: -1,
         stopAtSlide: -1,
 
-        shuffle: "off",
+        shuffle: 'off',
 
-        autoHeight: "off",
-        forceFullWidth: "off",
+        autoHeight: 'off',
+        forceFullWidth: 'off',
 
 
-        hideThumbsOnMobile: "off",
+        hideThumbsOnMobile: 'off',
         hideNavDelayOnMobile: 1500,
-        hideBulletsOnMobile: "off",
-        hideArrowsOnMobile: "off",
+        hideBulletsOnMobile: 'off',
+        hideArrowsOnMobile: 'off',
         hideThumbsUnderResolution: 0,
 
         hideSliderAtLimit: 0,
@@ -293,9 +293,9 @@ jQuery(document).ready(function () {
 
   /* Back to top */
 
-  jQuery("#back-top").hide();
+  jQuery('#back-top').hide();
 
-  jQuery(window).scroll(function () {
+  jQuery(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#back-top').fadeIn();
     } else {
@@ -340,9 +340,9 @@ jQuery(document).ready(function () {
 
   /* Google Analytics */
 
-  (function (i, s, o, g, r, a, m) {
+  (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
+    i[r] = i[r] || function() {
       (i[r].q = i[r].q || []).push(arguments)
     }, i[r].l = 1 * new Date();
     a = s.createElement(o),
@@ -377,24 +377,24 @@ jQuery(document).ready(function () {
           {saturation: -100}
         ]
       }, {
-        featureType: "road",
-        elementType: "geometry",
+        featureType: 'road',
+        elementType: 'geometry',
         stylers: [
           {lightness: 100},
-          {visibility: "simplified"}
+          {visibility: 'simplified'}
         ]
       }, {
-        featureType: "road",
-        elementType: "labels",
+        featureType: 'road',
+        elementType: 'labels',
         stylers: [
-          {visibility: "off"}
+          {visibility: 'off'}
         ]
       }
     ];
 
     // Create a new StyledMapType object, passing it the array of styles,
     // as well as the name to be displayed on the map type control.
-    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+    var styledMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
 
     // Create a map object, and include the MapTypeId to add
     // to the map type control.
@@ -422,7 +422,7 @@ jQuery(document).ready(function () {
     var marker = new google.maps.Marker({
       position: $latlng,
       map: map,
-      title: ""
+      title: ''
     });
 
   }
