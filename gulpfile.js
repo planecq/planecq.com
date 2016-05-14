@@ -2,15 +2,20 @@ var exec = require('child_process').exec;
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
 var bootlint  = require('gulp-bootlint');
 
+// Compile scss file
 gulp.task('sass', function() {
   return gulp.src('./assets/custom/scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/custom/scss/'));
 });
 
+// Watch version of the scss compilation
 gulp.task('sass:watch', function() {
   gulp.watch('./assets/custom/scss/style.scss', ['sass']);
 });
