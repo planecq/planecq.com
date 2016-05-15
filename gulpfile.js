@@ -151,12 +151,12 @@ gulp.task('compress:html:watch', function() {
 
 // Validate html, links, etc.
 gulp.task('html-proofer', function(done) {
-  execute('htmlproofer ./index.html --check-html --check-favicon --check-external-hash', {}, done);
+  execute('htmlproofer ./index.min.html --check-html --check-favicon --check-external-hash', {}, done);
 });
 
 // Validate bootstrap
 gulp.task('bootlint', function() {
-  return gulp.src('./index.html')
+  return gulp.src('./index.html.min')
     .pipe(bootlint({
       stoponerror: true
     }));
