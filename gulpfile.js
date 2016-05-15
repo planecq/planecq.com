@@ -12,6 +12,7 @@ var htmlmin = require('gulp-htmlmin');
 var size = require('gulp-size');
 var gutil = require('gulp-util');
 var gzip = require('gulp-gzip');
+var runSequence = require('run-sequence');
 var bootlint  = require('gulp-bootlint');
 
 var watching = false;
@@ -162,6 +163,13 @@ gulp.task('bootlint', function() {
 
 // Full test task
 gulp.task('test', ['html-proofer', 'bootlint']);
+
+// Full build task
+gulp.task('build', function(cb) {
+  // change this to gulp.series from gulp 4.0 onwards
+  // see https://github.com/OverZealous/run-sequence
+  runSequence('sass', 'compress:css', 'compress:js', 'compress:html', cb);
+});
 
 // Combine all watch tasks for development
 gulp.task('watch:all', ['sass:watch', 'compress:css:watch', 'compress:js:watch', 'compress:html:watch']);
