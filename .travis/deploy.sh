@@ -29,7 +29,8 @@ elif [ $TRAVIS_BRANCH == "staging" ] ; then
     git config user.email "travis@planecq.com"
 
     # commit compressed files and push it to remote
-    touch .deploy
+    rm -f .gitignore
+    cp .travis/deployignore .gitignore
     git add .
     git status # debug
     git commit -m "Deploy compressed files"
