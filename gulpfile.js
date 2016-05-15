@@ -11,6 +11,7 @@ var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
 var size = require('gulp-size');
 var gutil = require('gulp-util');
+var gzip = require('gulp-gzip');
 var bootlint  = require('gulp-bootlint');
 
 var watching = false;
@@ -64,12 +65,12 @@ gulp.task('sass:watch', function() {
   gulp.watch(config.scssFile, ['sass']);
 });
 
-// Concatenate and minify css assets with sourcemaps
-gulp.task('minify:css', function() {
+// Concatenate, minify and compress css assets, with sourcemaps
+gulp.task('compress:css', function() {
   var bef = size({title: 'all.css'});
-  var aft = size({title: 'all.min.css'});
+  var aft = size({title: 'all.min.css.gz'});
   return gulp.src(config.cssFiles)
-    .pipe(bef)
+    .pipe(gulpif(!watching, bef))
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({
       relativeTo: config.gulpFolder,
@@ -77,64 +78,73 @@ gulp.task('minify:css', function() {
       advanced: !watching
     }))
     .pipe(concat('all.min.css'))
-    .pipe(aft)
+    .pipe(gulpif(!watching, gzip()))
+    .pipe(gulpif(!watching, aft))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.gulpFolder))
     .on('finish', function() {
-      gutil.log('CSS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      if (!watching) {
+        gutil.log('CSS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      }
     });
 });
 
-// Watch version of css minification
-gulp.task('minify:css:watch', function() {
+// Watch version of css compression
+gulp.task('compress:css:watch', function() {
   watching = true;
-  gulp.watch(config.cssFiles, ['minify:css']);
+  gulp.watch(config.cssFiles, ['compress:css']);
 });
 
-// Concatenate and minify js assets with sourcemaps
-gulp.task('minify:js', function() {
+// Concatenate, minify and compress js assets, with sourcemaps
+gulp.task('compress:js', function() {
   var bef = size({title: 'all.js'});
-  var aft = size({title: 'all.min.js'});
+  var aft = size({title: 'all.min.js.gz'});
   return gulp.src(config.jsFiles)
-    .pipe(bef)
+    .pipe(gulpif(!watching, bef))
     .pipe(sourcemaps.init())
     .pipe(gulpif(!watching, uglify()))
     .pipe(concat('all.min.js'))
-    .pipe(aft)
+    .pipe(gulpif(!watching, gzip()))
+    .pipe(gulpif(!watching, aft))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.gulpFolder))
     .on('finish', function() {
-      gutil.log('JS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      if (!watching) {
+        gutil.log('JS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      }
     });
 });
 
-// Watch version of js minification
-gulp.task('minify:js:watch', function() {
+// Watch version of js compression
+gulp.task('compress:js:watch', function() {
   watching = true;
-  gulp.watch(config.jsFiles, ['minify:js']);
+  gulp.watch(config.jsFiles, ['compress:js']);
 });
 
-// Minify html
-gulp.task('minify:html', function() {
+// Minify and compress html
+gulp.task('compress:html', function() {
   var bef = size({title: 'index.html'});
-  var aft = size({title: 'index.min.html'});
+  var aft = size({title: 'index.min.html.gz'});
   return gulp.src(config.htmlFiles)
-    .pipe(bef)
+    .pipe(gulpif(!watching, bef))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
-    .pipe(aft)
+    .pipe(gulpif(!watching, gzip()))
+    .pipe(gulpif(!watching, aft))
     .pipe(gulp.dest('.'))
     .on('finish', function() {
-      gutil.log('HTML Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      if (!watching) {
+        gutil.log('HTML Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+      }
     });
 });
 
-// Watch version of html minification
-gulp.task('minify:html:watch', function() {
+// Watch version of html compression
+gulp.task('compress:html:watch', function() {
   watching = true;
-  gulp.watch(config.htmlFiles, ['minify:html']);
+  gulp.watch(config.htmlFiles, ['compress:html']);
 });
 
 // Validate html, links, etc.
@@ -154,7 +164,7 @@ gulp.task('bootlint', function() {
 gulp.task('test', ['html-proofer', 'bootlint']);
 
 // Combine all watch tasks for development
-gulp.task('watch:all', ['sass:watch', 'minify:css:watch', 'minify:js:watch', 'minify:html:watch']);
+gulp.task('watch:all', ['sass:watch', 'compress:css:watch', 'compress:js:watch', 'compress:html:watch']);
 
 // Util to execute external command
 function execute(cmd, opts, done) {

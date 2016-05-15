@@ -5,3 +5,4 @@ node_modules/
 gulp/
 assets/custom/scss/style.css*
 index.min.html
+*.gz
