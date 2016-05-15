@@ -3,5 +3,6 @@
   "maximumLineLength": false,
   "requireTrailingComma": false,
   "requireCamelCaseOrUpperCaseIdentifiers": false,
-  "requireCapitalizedComments": false
+  "requireCapitalizedComments": false,
+  "requireLineFeedAtFileEnd": true
 }

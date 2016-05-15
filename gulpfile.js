@@ -7,6 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
+var rename = require('gulp-rename');
+var htmlmin = require('gulp-htmlmin');
 var bootlint  = require('gulp-bootlint');
 
 var watching = false;
@@ -37,6 +39,9 @@ var config = {
     'assets/vendor/jquery-easing/js/jquery.easing.min.js',
     'assets/vendor/retina/js/retina.min.js',
     'assets/custom/js/script.js'
+  ],
+  htmlFiles: [
+    'index.html'
   ],
   gulpFolder: './gulp'
 };
@@ -91,6 +96,16 @@ gulp.task('minify:js', function() {
 gulp.task('minify:js:watch', function() {
   watching = true;
   gulp.watch(config.jsFiles, ['minify:js']);
+});
+
+// Minify html
+gulp.task('minify:html', function() {
+  return gulp.src(config.htmlFiles)
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename(function(path) {
+      path.basename += '.min';
+    }))
+    .pipe(gulp.dest('.'));
 });
 
 // Validate html, links, etc.
