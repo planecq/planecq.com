@@ -163,7 +163,9 @@ gulp.task('bootlint', function() {
 });
 
 // Full test task
-gulp.task('test', ['html-proofer', 'bootlint']);
+gulp.task('test', function(cb) {
+  runSequence('html-proofer', 'bootlint', cb);
+});
 
 // Full build task
 gulp.task('build', function(cb) {
