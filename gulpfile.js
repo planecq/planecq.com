@@ -131,6 +131,12 @@ gulp.task('minify:html', function() {
     });
 });
 
+// Watch version of html minification
+gulp.task('minify:html:watch', function() {
+  watching = true;
+  gulp.watch(config.htmlFiles, ['minify:html']);
+});
+
 // Validate html, links, etc.
 gulp.task('html-proofer', function(done) {
   execute('htmlproofer ./index.html --check-html --check-favicon --check-external-hash', {}, done);
@@ -148,7 +154,7 @@ gulp.task('bootlint', function() {
 gulp.task('test', ['html-proofer', 'bootlint']);
 
 // Combine all watch tasks for development
-gulp.task('watch:all', ['sass:watch', 'minify:css:watch', 'minify:js:watch']);
+gulp.task('watch:all', ['sass:watch', 'minify:css:watch', 'minify:js:watch', 'minify:html:watch']);
 
 // Util to execute external command
 function execute(cmd, opts, done) {
