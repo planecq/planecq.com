@@ -79,9 +79,9 @@ gulp.task('compress:css', function() {
       advanced: !watching
     }))
     .pipe(concat('all.min.css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulpif(!watching, gzip()))
     .pipe(gulpif(!watching, aft))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.gulpFolder))
     .on('finish', function() {
       if (!watching) {
@@ -105,9 +105,10 @@ gulp.task('compress:js', function() {
     .pipe(sourcemaps.init())
     .pipe(gulpif(!watching, uglify()))
     .pipe(concat('all.min.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(config.gulpFolder))
     .pipe(gulpif(!watching, gzip()))
     .pipe(gulpif(!watching, aft))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.gulpFolder))
     .on('finish', function() {
       if (!watching) {
