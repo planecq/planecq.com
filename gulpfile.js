@@ -9,6 +9,8 @@ var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
 var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
+var size = require('gulp-size');
+var gutil = require('gulp-util');
 var bootlint  = require('gulp-bootlint');
 
 var watching = false;
@@ -64,7 +66,10 @@ gulp.task('sass:watch', function() {
 
 // Concatenate and minify css assets with sourcemaps
 gulp.task('minify:css', function() {
+  var bef = size({title: 'all.css'});
+  var aft = size({title: 'all.min.css'});
   return gulp.src(config.cssFiles)
+    .pipe(bef)
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({
       relativeTo: config.gulpFolder,
@@ -72,8 +77,12 @@ gulp.task('minify:css', function() {
       advanced: !watching
     }))
     .pipe(concat('all.min.css'))
+    .pipe(aft)
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.gulpFolder));
+    .pipe(gulp.dest(config.gulpFolder))
+    .on('finish', function() {
+      gutil.log('CSS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+    });
 });
 
 // Watch version of css minification
@@ -84,12 +93,19 @@ gulp.task('minify:css:watch', function() {
 
 // Concatenate and minify js assets with sourcemaps
 gulp.task('minify:js', function() {
+  var bef = size({title: 'all.js'});
+  var aft = size({title: 'all.min.js'});
   return gulp.src(config.jsFiles)
+    .pipe(bef)
     .pipe(sourcemaps.init())
     .pipe(gulpif(!watching, uglify()))
     .pipe(concat('all.min.js'))
+    .pipe(aft)
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.gulpFolder));
+    .pipe(gulp.dest(config.gulpFolder))
+    .on('finish', function() {
+      gutil.log('JS Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+    });
 });
 
 // Watch version of js minification
@@ -100,12 +116,19 @@ gulp.task('minify:js:watch', function() {
 
 // Minify html
 gulp.task('minify:html', function() {
+  var bef = size({title: 'index.html'});
+  var aft = size({title: 'index.min.html'});
   return gulp.src(config.htmlFiles)
+    .pipe(bef)
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
-    .pipe(gulp.dest('.'));
+    .pipe(aft)
+    .pipe(gulp.dest('.'))
+    .on('finish', function() {
+      gutil.log('HTML Compression: ' + Math.round((bef.size - aft.size) / bef.size * 100) + '%');
+    });
 });
 
 // Validate html, links, etc.
