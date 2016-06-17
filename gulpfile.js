@@ -80,6 +80,7 @@ gulp.task('compress:css', function() {
     }))
     .pipe(concat('all.min.css'))
     .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(config.gulpFolder))
     .pipe(gulpif(!watching, gzip()))
     .pipe(gulpif(!watching, aft))
     .pipe(gulp.dest(config.gulpFolder))
@@ -133,6 +134,7 @@ gulp.task('compress:html', function() {
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
+    .pipe(gulp.dest('.'))
     .pipe(gulpif(!watching, gzip()))
     .pipe(gulpif(!watching, aft))
     .pipe(gulp.dest('.'))
