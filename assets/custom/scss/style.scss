@@ -42,7 +42,7 @@ $bg-darker: #2b2b2b;
 $bg-accent: #237d89;
 $bg-light-texture: url('../images/backgrounds/contrast/bg-light.png');
 $bg-dark-texture:  url('../images/backgrounds/contrast/bg-dark.png');
-$bg-wood:  url('../../images/bg-wood.jpg');
+$bg-wood:  url('../../images/bg-wood.jpg?v=1.0');
 $fontcolor-regular: #333;
 $fontcolor-medium: #999;
 $fontcolor-invert: #fff;
@@ -3884,5 +3884,5 @@ a.gm-toggle-link {  cursor: pointer;  }
 */
 
 .tp-bannertimer {
-    background: url(../../images/timer.png);
+    background: url(../../images/timer.png?v=1.1);
 }
