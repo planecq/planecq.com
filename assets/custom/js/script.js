@@ -343,17 +343,65 @@ jQuery(document).ready(function() {
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
+      (i[r].q = i[r].q || []).push(arguments);
     }, i[r].l = 1 * new Date();
     a = s.createElement(o),
     m = s.getElementsByTagName(o)[0];
     a.async = 1;
     a.src = g;
-    m.parentNode.insertBefore(a, m)
+    m.parentNode.insertBefore(a, m);
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-40696437-6', 'auto');
-  ga('send', 'pageview');
+  ga('create', 'UA-79494144-1', 'auto');
+  ga('send', 'pageview'); // <- this is for simple pageviews, not suitable for single page websites
+
+  // Event tracking for google analytics on single page website
+  // inspired by http://cutroni.com/blog/2012/02/21/advanced-content-tracking-with-google-analytics-part-1/
+  var timer = 0;
+  var callBackTime = 700;
+  var debugTracker = false;
+  var currentItem = '';
+  var score = 0;
+  var order = 1;
+  // update score (number of seconds in active view)
+  Visibility.every(1000, function() {
+    score++;
+  });
+  function trackLocation() {
+    if (!debugTracker) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Navigation (order)',
+        eventAction: '#' + currentItem,
+        eventValue: order
+      });
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Duration (sec.)',
+        eventAction: '#' + currentItem,
+        eventValue: score
+      });
+    } else {
+      console.log('You have viewed: #' + currentItem + ' (order ' + order + ', ' + score + ' sec.)');
+    }
+    // determine current location
+    currentItem = $('.nav li.active > a').text();
+    // reset score
+    score = 0;
+    order++;
+  }
+  $('body').on('activate.bs.scrollspy', function() {
+    // Use a buffer so we don't call track location too often (high speed scroll)
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(trackLocation, callBackTime);
+  });
+  window.onbeforeunload = function() {
+    trackLocation();
+    return null;
+  };
+
 
   var gmapIsReady = false;
 

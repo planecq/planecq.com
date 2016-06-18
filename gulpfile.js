@@ -42,6 +42,7 @@ var config = {
     'assets/vendor/modernizr/js/modernizr.js',
     'assets/vendor/jquery-easing/js/jquery.easing.min.js',
     'assets/vendor/retina/js/retina.min.js',
+    'assets/vendor/visibility/js/visibility-1.2.1.min.js',
     'assets/custom/js/script.js'
   ],
   htmlFiles: [
