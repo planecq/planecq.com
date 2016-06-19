@@ -3732,7 +3732,7 @@ a.gm-toggle-link {  cursor: pointer;  }
       float: left;
       h1 {
         font-size: 28px;
-        margin-top: 26px;
+        margin-top: 20px;
       }
     }
     .sticky-wrapper, .sticky-header {  height: 80px !important;  }
@@ -3753,7 +3753,7 @@ a.gm-toggle-link {  cursor: pointer;  }
     #mobnav-btn {
       display: block;
       float: right;
-      margin-top: 11px;
+      margin-top: 15px;
     }
     #main-menu {
       float: none;
@@ -3888,4 +3888,9 @@ a.gm-toggle-link {  cursor: pointer;  }
 
 .tp-bannertimer {
     background: url(../../images/timer.png?v=1.1);
+}
+/* fix iphone phone number css */
+a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
 }
