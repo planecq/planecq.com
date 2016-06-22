@@ -13,6 +13,13 @@
     <meta name="description" content="Company website for Planecq Pte. Ltd. Consulting and Development services in the area of web applications, the Internet of Things and Smart Spaces.">
     <meta name="keywords" content="planecq, development, consulting, web, applications, web apps, iot, internet of things, internet, smart spaces, smart homes, smart factory, smart industry, smart business, connected objects, singapore, malaysia">
 
+    <!-- Check browser first and redirect unsupported browsers to updatebrowser page -->
+    <script src="assets/vendor/bowser/js/bowser.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      console.log("Browser detected: " + bowser.name + " " + bowser.version);
+      if(bowser.msie && bowser.version <= 8) { window.location.replace("updatebrowser.html"); }
+    </script>
+
     <!-- Favicon and app icons :: http://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png?v=1.1">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png?v=1.1">
