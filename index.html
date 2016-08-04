@@ -545,5 +545,34 @@
     </div>
     <!-- /Back to Top -->
 
+    <!-- Outdated Browser Detection -->
+    <div id="outdated"></div>
+    <script type="text/javascript">
+      // event listener: DOM ready
+      function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+          window.onload = func;
+        } else {
+          window.onload = function() {
+            if (oldonload) {
+              oldonload();
+            }
+            func();
+          }
+        }
+      }
+      // call plugin function after DOM ready
+      addLoadEvent(function(){
+          outdatedBrowser({
+          bgColor: '#237d89',
+          color: '#ffffff',
+          lowerThan: 'IE9',
+          languagePath: 'outdatedbrowser.html'
+        })
+      });
+    </script>
+    <!-- /Outdated Browser Detection -->
+
   </body>
 </html>

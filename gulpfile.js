@@ -24,9 +24,11 @@ var config = {
     'assets/vendor/novecento/css/novecento-font.css',
     'assets/vendor/rs-plugin/css/settings.css',
     'assets/vendor/rs-plugin/css/extralayers.css',
+    'assets/vendor/outdatedbrowser/outdatedbrowser.css',
     'assets/custom/scss/style.css'
   ],
   jsFiles: [
+    'assets/vendor/outdatedbrowser/outdatedbrowser.js',
     'assets/vendor/jquery/js/jquery-1.10.1.min.js',
     'assets/vendor/bootstrap/js/bootstrap.min.js',
     'assets/vendor/sticky/js/jquery.sticky.js',
