@@ -3497,7 +3497,13 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   bottom: 300px;
   display:none;
 }
-a.gm-toggle-link {  cursor: pointer;  }
+a.gm-toggle-link {
+  cursor: pointer;
+  color: $fontcolor-invert;
+  &:hover {
+    color: $fontcolor-invert;
+  }
+}
 .gm-toggle  {
   margin: 0 auto;
   padding: 12px 0;
