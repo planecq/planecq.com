@@ -493,23 +493,43 @@ $accentcolor: #ff9900;
 
 @font-face {
     font-family: 'Colaborate-Thin';
-    src: url('../fonts/ColabThi.otf');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_thin/ColabThi-webfont.eot');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_thin/ColabThi-webfont.eot?iefix') format('eot'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_thin/ColabThi-webfont.woff') format('woff'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_thin/ColabThi-webfont.ttf') format('truetype'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_thin/ColabThi-webfont.svg#webfont') format('svg');
 }
 @font-face {
     font-family: 'Colaborate-Light';
-    src: url('../fonts/ColabLig.otf');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_light/ColabLig-webfont.eot');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_light/ColabLig-webfont.eot?iefix') format('eot'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_light/ColabLig-webfont.woff') format('woff'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_light/ColabLig-webfont.ttf') format('truetype'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_light/ColabLig-webfont.svg#webfont') format('svg');
 }
 @font-face {
     font-family: 'Colaborate-Medium';
-    src: url('../fonts/ColabMed.otf');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_medium/ColabMed-webfont.eot');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_medium/ColabMed-webfont.eot?iefix') format('eot'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_medium/ColabMed-webfont.woff') format('woff'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_medium/ColabMed-webfont.ttf') format('truetype'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_medium/ColabMed-webfont.svg#webfont') format('svg');
 }
 @font-face {
     font-family: 'Colaborate-Regular';
-    src: url('../fonts/ColabReg.otf');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_regular/ColabReg-webfont.eot');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_regular/ColabReg-webfont.eot?iefix') format('eot'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_regular/ColabReg-webfont.woff') format('woff'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_regular/ColabReg-webfont.ttf') format('truetype'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_regular/ColabReg-webfont.svg#webfont') format('svg');
 }
 @font-face {
     font-family: 'Colaborate-Bold';
-    src: url('../fonts/ColabBol.otf');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_bold/ColabBol-webfont.eot');
+    src: url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_bold/ColabBol-webfont.eot?iefix') format('eot'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_bold/ColabBol-webfont.woff') format('woff'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_bold/ColabBol-webfont.ttf') format('truetype'),
+    url('../fonts/Colaborate-fontfacekit/webfonts/colaborate_bold/ColabBol-webfont.svg#webfont') format('svg');
 }
 
 $font-accident-one-book:          Novecentosanswide-Book,      sans-serif;
